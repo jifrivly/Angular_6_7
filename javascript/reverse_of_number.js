@@ -1,11 +1,10 @@
-var a = 375, i = 0,z = 0
-var y = a;
-while (i < 3) {
-    x = y % 10
-    y = y / 10
+var num = 5021,
+  reverse = 0,
+  remainder = 0;
 
-    i++
-    if()
-    z += x*100
+while (num > 0) {
+  remainder = num % 10;
+  reverse = reverse*10 + remainder;
+  num = parseInt(num / 10);
 }
-
+console.log("Reverse : " + reverse);
