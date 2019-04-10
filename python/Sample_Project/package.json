@@ -1,0 +1,11 @@
+{
+  "name": "python_sample_project",
+  "version": "1.0.0",
+  "description": "python sample project from ICTA paatashala Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jifrivly",
+  "license": "ISC"
+}
