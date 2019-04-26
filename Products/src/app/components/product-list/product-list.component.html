@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <h1> {{title}} </h1>
+  <div class="card">
+    <div class="card-header">
+      Product List
+    </div>
+    <div class="card-body">
+      <table *ngIf="products && products.length; else noProductBlock" class="table table-responsive table-bordered">
+        <thead>
+          <tr>
+            <th>
+              <button (click)="toggleImage()" class="btn btn-primary">
+                {{image}} Image
+              </button>
+            </th>
+            <th>Product</th>
+            <th>Code</th>
+            <th>Available</th>
+            <th>Price</th>
+            <th>5 Start Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let i of products">
+            <!-- <td scope="row"><img src="{{i.imageUrl}}" title="{{i.productName}} image"></td> -->
+            <td>
+              <img *ngIf="show" [src]="i.imageUrl" [title]="i.productName + ' image'" [style.width.px]="imageWidth"
+                [style.margin.px]="imageMargin">
+            </td>
+            <td>{{i.productName | uppercase}}</td>
+            <td>{{i.productCode}}</td>
+            <td>{{i.releaseDate | date}}</td>
+            <td>{{i.price | currency:"INR"}}</td>
+            <td>{{i.starRating}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <ng-template #noProductBlock>No products available</ng-template>
+    </div>
+  </div>
+</div>
