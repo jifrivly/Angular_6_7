@@ -12,4 +12,9 @@ export class ProductService {
     return this.http.get("http://localhost:3000/products")
   }
 
+  addNewProduct(item) {
+    return this.http.post("http://localhost:3000/insert", { "product": item })
+      .subscribe((data) => { console.log(data) });
+  }
+
 }

@@ -1,11 +1,13 @@
 <div class="container">
-  <form (ngSubmit)="addProduct()">
-    Enter name : <input type="text" name="pname" value=""><br>
-    Enter code : <input type="text" name="pcode" value=""><br>
-    Release Date : <input type="date" name="pdate" value=""><br>
-    Enter Description : <input type="text" name="pname" value=""><br>
-    Enter price : <input type="number" name="pprice" value=""><br>
-    Enter Star Rating : <input type="number" name="prating" value=""><br>
+  <form name="addProductForm" (ngSubmit)="addProduct()">
+    Enter ID : <input type="text" name="pId" [(ngModel)]="productData.productId" value=""><br>
+    Enter name : <input type="text" name="pname" [(ngModel)]="productData.productName" value=""><br>
+    Enter code : <input type="text" name="pcode" [(ngModel)]="productData.productCode" value=""><br>
+    Release Date : <input type="date" name="pdate" [(ngModel)]="productData.releaseDate" value=""><br>
+    Enter Description : <input type="text" name="pname" [(ngModel)]="productData.description" value=""><br>
+    Enter price : <input type="number" name="pprice" [(ngModel)]="productData.price" value=""><br>
+    Enter Star Rating : <input type="number" name="prating" [(ngModel)]="productData.starRating" value=""><br>
+    Enter URL of Image : <input type="text" name="pname" [(ngModel)]="productData.imageUrl" value=""><br>
     <button type="submit">Add Product</button>
   </form>
 </div>
